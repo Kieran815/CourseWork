@@ -1,0 +1,19 @@
+// 1. an Object in JavaScript is an item that contains subsets of information
+// that inclueds names and values relating to the perameters of the item.
+
+// 2. Properties define the characteristics of an object.
+
+
+//Declare a class called Clothes that takes three parameters in the constructor,
+// name, size, and price. Create a variable called shirt that is equal to a new
+// instance of Clothes with name = 'V-Neck', size = 'Medium' and price = 20.
+
+
+class Clothes {
+    constructor(name, size, price) { 
+        this.name = name; 
+        this.size = size; 
+        this.price = price; 
+    } 
+} 
+let shirt = new Clothes('V-Neck', 'Medium', 20); 

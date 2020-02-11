@@ -1,0 +1,6 @@
+<!--In the CSS tab, use a tag selector to select the h2 element and apply the color fuchsia to it. Next, use an ID selector to select the ID idselector and apply the background-color turquoise to it. Then, use a class selector to select the class selectorclass and apply an opacity of 0.5 to it. Lastly, select only the div element with the class selectorclass and give it a border-style of solid.-->
+CSS
+h2 {color: fuscia;}
+#idselector {background-color: turquoise;}
+.selectorclass {opacity: 0.5;}
+.div {border-style: solid;}

@@ -1,0 +1,10 @@
+1. An array is a set of data stored in a list.
+
+2. Yes, you can mix strings and numbers, but it is inadvisable.
+
+3. Zero Index
+
+```
+var clothes = ['collared shirt', 'shirt'];
+push.clothes('jacket');
+```

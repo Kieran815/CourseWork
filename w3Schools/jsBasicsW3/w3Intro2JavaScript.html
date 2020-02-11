@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script>
+    function myFunction1() {
+    document.getElementById('demo6').innerHTML =
+    "JavaScript can be ran from the Head or Body of an HTML file, or..."
+    }
+    </script>
+  </head>
+
+
+  <body>
+
+    <h1>W3 Schools JavaScript Intro</h1>
+<hr>
+      <p>JavaScript makes Web Pages Interactive and Dynamic</p>
+      <!--post date and timeout inline JS-->
+      <button type="button" onclick="this.innerHTML=Date()">
+        Have you got the Time???</button>
+<hr>
+      <!--Inline JS to change <p> content-->
+      <button type="button" onclick='document.getElementById("demo1").innerHTML
+      = "Hello JavaScript!!!"'>Change Content</button>
+      <p id="demo1">JavaScript can change HTML content</p>
+<hr>
+
+      <!--Switch Attributes-->
+      <p>JavaScript can change HTML attribute values.</p>
+      <p>In this case, JavaScript changes the value of the `src` (source)
+      attribute of an image.</p>
+
+      <button onclick="document.getElementById('myImage')
+      .src='images/bulbOn.jpg'">
+      Turn On the Light </button>
+      <img id="myImage" src="images/bulbOff.jpg">
+      <button onclick="document.getElementById('myImage')
+      .src='images/bulbOff.jpg'">
+      Turn Off the Light </button>
+<hr>
+
+      <p id="demo2">JavaScript can also change the style of HTML Elements</p>
+      <button type="button" onclick="document.getElementById('demo2')
+      .style.fontSize='35px'">Change Font</button>
+<hr>
+
+      <p>JavaScript can Hide HTML elements...</p>
+      <p id="demo3">Here's The Stash...</p>
+      <button type="button" onclick="document.getElementById('demo3').style
+      .display='none'">
+      Hide your Stash</button>
+
+      <p>Or Reveal Them</p>
+
+      <button type="button" onclick="document.getElementById('demo4').style
+      .display='block'">
+      What's Good?</button>
+      <p id="demo4" style="display:none">What's REALLY Good?!?!?!</p>
+<hr>
+
+    <h2>JavaScript Placement</h2>
+      <p id="demo5"></p> <!--The paragraph element is empty-->
+        <script>
+        document.getElementById('demo5').innerHTML =
+        "This Paragraph's content is written in `script` tags";
+        </script>
+
+      <p id='demo6'><b>This Script Changed from inside Head Tags</b></p>
+        <button type="button" onclick="myFunction1()">
+        Run Head Script</button>
+<hr>
+
+      <p id='demo7'>Saved to External files and called in</p>
+        <button type="button" onclick="myFunction2()">Run External JS</button>
+          <script src="jsSheets/callingExternalFiles.js"></script>
+<hr>
+
+      <!--Use `window.alert("###")` to open alert windows with JavaScript-->
+      <p><b>Look here for details on how to write alert pop-ups</b></p>
+        <script src="jsSheets/alert.js"></script>
+<hr>
+
+      <p>Separate JavaScript statements with Semicolons.
+        Add a semicolon at the end of each executable statement. Ending
+        statements with semicolon is not required, but highly recommended.</p>
+      <p id="demo8"></p>
+        <script src="jsSheets/variables.js"></script>
+<hr>
+
+    <h2>JavaScript Statements</h2>
+      <p>JavaScript code blocks are written between curley brackets{}</p>
+      <p id="demo9"></p>
+      <p id="demo10"></p>
+      <button type="button" onclick="myFunction3()">Run JS Code</button>
+        <script>
+        function myFunction3() {
+          document.getElementById('demo9').innerHTML = "Grinding out the Skills";
+          document.getElementById('demo10').innerHTML = "To Pay Off them Bills";
+        }
+        </script>
+<hr>
+
+    <h3>JavaScript Objects & Functions</h3>
+      <p>This Example calls a function to convert from 72 Fahrenheit to Celsius.
+        Inspect to see script.</p>
+      <p id="demo11"></p>
+        <script src=jsSheets/toCelsius.js></script>
+<hr>
+
+      <p>METHODS are functions stored as a property, like in an array.</p>
+      <p id="demo12"></p>
+        <script src="jsSheets/methods.js"></script>
+<hr>
+
+    <h2>JavaScript String Methods</h2>
+      <p>String Length is txt.length. The Length of my Christian Name,
+        "Kieran Michael Milligan", is...</p>
+      <p id="demo13"></p>
+        <script src="jsSheets/txtDOTlength.js"></script>
+<hr>
+
+      <p>The <b>indexOf()</b> method returns the index of (the position of) the
+        first occurrence of a specified text in a string:</p>
+        <p> to find the index of 'text' above, you can say indexOf("text") and
+          it will kick out your results as the index of the first character in
+        the word.</p>
+        <p  id="demo14"></p>
+          <script src="jsSheets/indexOf.js"></script>
+<hr>
+
+      <p> Use <b>lastIndexOf()</b> to find the last occurrence of a text.</p>
+      <p>Example: Making an Index of Index to find the Index of the Last Index.
+         Index.<p>
+      <p id="demo15"></p>
+        <script src="jsSheets/lastIndexOf.js"></script>
+<hr>
+
+    <h3>Extracting String Parts: I'm Awesome.</h3>
+      <pre>
+        3 Methods for extracting parts of a String:
+          slice(start, end)
+          substring(start,end)
+          substr(start, length)
+      </pre>
+<hr>
+
+      <p><b>Using slice()</b></p>
+      <p>slice() can be used a few different ways to cut strings. You can put
+        in two parameters for a starting and ending point, or you can use a
+        single parameter and it will start there and count the rest of the
+        string.</p>
+      <p>The slice() method extract a part of a string and returns the extracted
+         parts in a new string. You can select two indices to have it extract
+          text. slice() can take positive or negative indices to count forwards
+        or backwards.</p>
+      <p> Example: "If everybody thinks I'm Awesome..."</p>
+      <p id="demo16"></p>
+      <p>**Note: This slice() was written with negative integers</p>
+        <script src="jsSheets/slice.js"></script>
+<hr>
+
+      <p><b>Using substring()</b></p>
+      <p>substring() is similar to slice(), but can't accept negative numbers.
+        Until I find a better reason not to, default to slice().</p>
+      <p>Using the same Example from Before: "If everybody thinks I'm
+         Awesome..."</p>
+      <p id="demo17"></p>
+        <script src="jsSheets/substring.js"></script>
+<hr>
+
+      <p><b>Using substr()</b></p>
+      <p> substr() is similar to slice(), but the <b>second parameter is the
+      length</b> of the extracted text.</p>
+      <p>Same Example: "If everybody thinks I'm Awesome..."</p>
+      <p id="demo18"></p>
+        <script src="jsSheets/substr.js"></script>
+<hr>
+
+      <p><b>Using replace()</b></p>
+      <p>replace() cuts and replaces text, useful for changing all instances of
+        an occurance, like name or statement changes. This instance is attached
+      to a function and called onclick.</p>
+  <br>
+      <p>Because: "If everybody thinks I'm Awesome..."</p>
+      <button onclick="myFunction4()">Better</button>
+      <p id="demo19">Maybe They're on to something...</p>
+        <script src="jsSheets/replace.js"></script>
+<hr>
+
+      <p><b>Converting to/from Upper & Lower Case</b></p>
+      <p>Convert a string to upper case useing toUpperCase()</p>
+      <button onclick="myFunction5()">click me</button>
+      <p id="demo20">i always imagined myself taller</p>
+        <script src="jsSheets/toUpperCase.js"></script>
+  <br>
+      <p>Convert a string to lower case using toLowerCase()</p>
+      <button onclick='myFunction6()'>CLICK ME</button>
+      <p id='demo21'>I WISH I WAS SHORTER</p>
+        <script src="jsSheets/toLowerCase.js"></script>
+<hr>
+
+      <p><b>concat()</b>: combining strings</p>
+      <p>concat() the strings "What's" and "Good" to find out...</p>
+      <p id="demo22"></p>
+        <script src="jsSheets/concat.js"></script>
+<hr>
+
+    <h2>Arrays and Array Methods</h2>
+      <p>These are samples arrays:</p>
+      <p>carBrands:</p>
+      <p id="demo23"></p>
+      <p>carModels:</p>
+      <p id="demo24"></p>
+        <script src="jsSheets/array.js"></script>
+<hr>
+
+    <h3>Manipulate the Elements of an Array:</h3>
+      <p>You access an array element by referring to the <b>index
+         number</b>:</p>
+      <p>arrayName[0]</p>
+      <p id="demo25"></p>
+  <br>
+      <p>Access the <b>Last Element of an Array</b> using:</p>
+      <p>arrayName[arrayName.length-1]</p>
+      <p id="demo28"></p>
+        <script src="jsSheets/accessArrayElements.js"></script>
+  <br>
+        <p>This statement accesses the first element in `carModels` from
+          "Thunderbird" to "Tempo":</p>
+        <p>carModel[0] = "Tempo";</p>
+      <p id="demo26"></p>
+      <script src="jsSheets/changeArrayElement.js"></script>
+<hr>
+
+    <h3>Arrays are Objects</h3>
+      <p>The <b>typeof</b> operator in JavaScript returns "object" for arrays. But,
+        JavaScript arrays are best described as arrays. Arrays use numbers to
+        access its "elements". Objects use names to access its "members". In
+        this example, person.firstName returns `Kieran`:</p>
+      <p id="demo27"></p>
+        <script src="jsSheets/arrayObjects.js"></script>
+      <p>JavaScript variables can be objects. Arrays are special kinds of
+        objects. You can have variables of different types, function, arrays or
+        other objects in an Array.</p>
+  <br>
+
+    <h2>Array Methods</h2>
+      <p>JavaScript Methods are Actions that can be performed on objects. A
+    JavaScript Method is <b>a property containing a function
+    definition</b><p/>
+  <br>
+    <h3>Looping Through Arrays</h3>
+      <p>The safest way to loop through an array is a <b>'for'</b> loop, usually
+         written as such:</p>
+      <p> for (i = 0; i < arrayName.length; i++)</p>
+      <p id="demo29"></p>
+        <script src="jsSheets/forLoop.js"></script>
+      <p>You can also use the <b>Array.forEach()</b> function:</p>
+      <p><b>arrayName.forEach(functionName)</b>, where the function is what you
+      want to do with the data. This example logs the `consoles` array variables
+       into an unordered list of `value`s.</p>
+      <p id="demo30"></p>
+      <script src="jsSheets/forEach.js"></script>
+  <br>
+    <h3>Adding Array Elements</h3>
+      <p>The easiest way to add a new element to an array is using the
+        <b>`.push()`</b> method:</p>
+      <p><b>arrayName.push("value");</b></p>
+      <p>The push method appends a new element to an array.</p>
+      <button onclick="myFunction8()">Add a Console</button>
+      <p id="demo31"></p>
+        <script src="jsSheets/addingArrayElements.js"></script>
+  <br>
+      <p>New elements can also be added to an array using the <b>`.length`</b>
+         property:</p>
+      <p>arrayName[arrayName.length] = "value";</p>
+      <p>The `.length` property provides an easy way to append new elements to an
+        array without using the `push()` method.</p>
+      <button onclick="myFunction9()">Add a Console</button>
+      <p id="demo32"></p>
+        <script src="jsSheets/.length.js"></script>
+<hr>
+
+
+
+
+
+
+<!-- generally place js script tags at bottom of document-->
+  </body>
+</html>

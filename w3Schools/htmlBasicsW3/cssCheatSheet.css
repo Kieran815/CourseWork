@@ -1,0 +1,86 @@
+body {
+  background-image:url('images/woodpanel.jpg')
+}
+h1 {
+  color: red;
+}
+h2 {
+  color: orange;
+}
+h3 {
+  color: yellow;
+}
+h4 {
+  color: green;
+}
+h5 {
+  color: blue;
+}
+h6 {
+  color: #8e44ad;
+  font-size:35px;
+}
+
+
+p {
+  color: white; /* google 'recognized html colors' */
+  font-family: helvetica; /* google 'html font-family' for web-safe list*/
+  font-size: 100%;
+  border: 2px;
+  margin: 10px;
+}
+
+/* Examples of how to style page elements that change*/
+a:link {
+  color: green;
+  background-color: transparent;
+  text-decoration: none;
+}
+
+a:visited {
+  color: pink;
+  background-color: transparent;
+  text-decoration: none;
+}
+
+a:hover {
+  color: red;
+  background-color: transparent;
+  text-decoration: underline;
+}
+
+a:active {
+  color: yellow;
+  background-color: transparent;
+  text-decoration: underline;
+}
+
+
+/* ***borders for Tables*** */
+table, th, td {
+  border: 1px solid;
+  border-color: lime;
+  border-collapse: collapse;
+}
+
+.divEx{ /* Change div styles by using  `.className`, like .divEx*/
+  background-image:url('images/hudBg.jpg');
+  color: yellow;
+  font-family: sans-serif;
+  margin: 20px;
+  padding: 20px;
+}
+
+table { /*If the table has collapsed borders, border-spacing has no effect.*/
+  border-spacing: 5px;
+  background-color: lightblue;
+  color: black;
+}
+
+th, td { /* padding changes the space between the cell data and the border*/
+  padding: 10px;
+}
+
+th{ /*change text alignment for headers w/ css*/
+  text-align: left;
+}

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+	<head>
+		<meta charset="utf-8">
+		<title>IF Statements</title>
+
+		<style media="screen">
+
+		</style>
+
+	</head>
+	<body>
+		<h1>If Statements</h1>
+
+		Enter a Number: <input type="number" id="input1"> <br>
+			<button name="submit" onclick=runTest()>Submit</button>
+
+		<script type="text/javascript">
+
+			function runTest() {
+				let myVariable = document.getElementById("input1").value;
+				if (myVariable == 100) {
+					alert('Variable is 100');
+				} else if (myVariable == 200) {
+					alert('Variable is 200!!!');
+				} else {
+					alert('Variable is ' + myVariable);
+				}
+			}
+
+
+		</script>
+
+	</body>
+</html>

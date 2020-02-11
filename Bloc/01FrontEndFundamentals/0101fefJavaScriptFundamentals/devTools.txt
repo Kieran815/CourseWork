@@ -1,0 +1,18 @@
+/* 1. Request URL: https://412-zqr-205.mktoresp.com/webevents/visitWebPage?_mchNc=1543361542919&_mchRu=%2Fevent%2Fviewed-landing&_mchQp=&_mchId=412-ZQR-205&_mchTk=_mch-bloc.io-1542651474054-50144&_mchHo=www.bloc.io&_mchPo=&_mchPc=https%3A&_mchVr=154&_mchRe=https%3A%2F%2Fwww.bloc.io%2Fstudent_dashboard%2Fkieran-milligan
+      https://www.bloc.io/api/v1/enrollment_chains/8230/checkpoints_remaining_in_section
+      https://api-iam.intercom.io/messenger/web/metrics
+      https://www.bloc.io/student_dashboard/kieran-milligan
+*/    https://api.segment.io/v1/m
+
+// 2. 'Application' tab -> "Storage" subsection in sidebar -> Cookies : produces list of all cookies from site.
+
+// 3. either in the 'Console' tab, or the 'Sources' tab if you want to write the JavaScript directly in and run it.
+
+// 4. 'Elements' tab -> 'Styles' tab on sidebar -> ='+' for new Elements
+
+// 5. Changes are deleted and the file goes back to the original format.
+
+// 6. Sources Tab -> breakpoints window -> gives you dozens of options for
+// where you want to have the code stop
+//   Editor window -> click on number next to line of code where you want
+// program to stop.

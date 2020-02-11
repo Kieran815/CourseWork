@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+	<head>
+		<meta charset="utf-8">
+		<title>CSS: Floating Elements</title>
+
+		<style>
+			#header {
+				width: 100%;
+				background-color: black;
+				color: white;
+				text-align: center;
+				display: block; /* 'block' displays div on single row */
+			}
+
+			#navigation {
+				background-color: #555555;
+				color: #ffffff;
+				display: inline-block; /* inline block places items next to each other, then get 'float' instructions */
+				float: left;
+				width: 20%;
+			}
+
+			#content {
+				background-color: #ffffff;
+				color: #000000;
+				display: inline-block;
+				float: right;
+				width: 50%;
+			}
+
+			#footer {
+				width: 100%;
+				background-color: black;
+				color: white;
+				float: left;
+				display: block;
+			}
+		</style>
+
+	</head>
+	<body>
+
+
+		<div id="header">
+				<h1>Page Header</h1>
+		</div>
+
+		<div id="navigation">
+			Item 1<br>
+			Item 2<br>
+			Item 3<br>
+			Item 4<br>
+		</div>
+
+		<div id="content">
+			<p>Page Content Here, Information from Page</p>
+		</div>
+
+		<div id="footer">
+			<p>This is the footer</p>
+		</div>
+
+
+	</body>
+</html>

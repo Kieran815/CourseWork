@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+	<head>
+		<meta charset="utf-8">
+		<title>JS Intervals and Timeouts</title>
+
+		<style media="screen">
+
+		#showTimer {
+			height: 200px;
+			width: 200px;
+			text-align: center;
+			line-height: 200px;
+			background-color: gray;
+		}
+
+		</style>
+	</head>
+	<body>
+		<div id="intro">
+			<p>See Script Source for Info on Timeouts and Intervals</p>
+		</div>
+		<p id="continue">The Current Time is:</p>
+		<div id="showTimer">
+			00:00:00 XM
+		</div>
+		<div id="buttonHouse">
+			<button type="button" onclick="stopTimer()">Stop Clock</button>
+
+		</div>
+
+		<script type="text/javascript">
+
+		// Intervals - Event Happens Repeatedly
+		// var testInterval = setInterval(() => { alert('This is My Interval')}, 10000);
+
+		// TimeOut - Event Happens Once
+		// var testTimeout = setTimeout(() => {alert('This is my Timeout Alert')}, 3000);
+
+		var myClock = setInterval(() => { timer() }, 1000);
+		var timerButton = document.getElementsByTagName('button')[0];
+
+
+		function timer() {
+			var curDate = new Date();
+			var curTime = curDate.toLocaleTimeString();
+			document.getElementById('showTimer').innerHTML = curTime;
+		}
+
+		function stopTimer() {
+			clearInterval(myClock);
+			timerButton.innerHTML = "Start Clock";
+			timerButton.setAttribute('onclick', 'startTimer()');
+			document.getElementById('continue').innerHTML = "Click again to Update";
+		}
+
+		function startTimer() {
+			myClock = setInterval(() => { timer() }, 1000);
+			timerButton.innerHTML = "Stop Clock";
+			// `setAttribute` lets you change a specific attribute and its value
+			timerButton.setAttribute('onclick', 'stopTimer()');
+			document.getElementById('continue').innerHTML = "Click again to Stop";
+		}
+
+		</script>
+	</body>
+</html>

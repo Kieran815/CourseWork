@@ -1,0 +1,8 @@
+1. In your own words, explain the React core concept of encapsulation. Discuss why this React principle is important in application development.
+
+Encapsulation is a way to be able to reuse components multiple times throughout
+a project whether they are class or class based or functional components. You
+can program them to do basic functions or receive state and props as part of a
+class based component that can send the results back to the main app to be
+used elsewhere. I've been looking at it like legos, in that you can snap in
+and remove them do make a web app.

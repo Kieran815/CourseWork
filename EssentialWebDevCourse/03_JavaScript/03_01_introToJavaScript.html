@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+	<head>
+		<meta charset="utf-8">
+		<title>Intro To JavaScript</title>
+
+		<style media="screen">
+
+		</style>
+
+	</head>
+
+	<body>
+
+		<div>
+			<p id="demo"></p>
+			<button onClick=kieran();>Click Here!!!</button><br>
+			<p id='demo2'></p>
+			<button onClick=fullName()>What's My Name???</button>
+			<br><br>
+			<button onClick=addItUp()>Help Me Math! What's 5*10?</button>
+			<p id=bestOS onClick=bestOS()>Click to Reveal Best Operating System Ever</p>
+		</div>
+
+
+
+		<!--can place JS either in body or before end of head tag -->
+				<script type="text/javascript">
+					alert('Hello World!');
+					document.getElementById('demo').innerHTML = "Hello World!!";
+
+					function kieran() {
+						document.getElementById('demo2').innerHTML = "What's Good?!?!?!"
+					}
+
+					var x = 5;
+
+					// Syntax
+					function fullName() {
+						// Camel Casing
+						var lastName = 'Milligan';
+						// can use underscore for variables
+						var first_Name= 'Kieran';
+						alert(first_Name + ' ' + lastName);
+					}
+
+					function addItUp() {
+						alert(5*10);
+					}
+
+					function bestOS() {
+						document.getElementById('bestOS').innerHTML = "Linux";
+					}
+
+				</script>
+
+	</body>
+</html>

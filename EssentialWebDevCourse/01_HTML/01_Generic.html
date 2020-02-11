@@ -1,0 +1,104 @@
+<!-- 'DOCTYPE' tells browser what type of file the page is -->
+<!DOCTYPE html>
+<!-- All elements for page go between html tags -->
+<html>
+
+	<!--Heading tag holds important info for page and html attributes; 'meta', 'title', etc. -->
+	<head>
+		<!-- Meta feeds info to rest of page -->
+		<meta charset="UTF-8" />
+		<!-- title feeds back to google for SEO  -->
+		<title>Generic Webpage HTML</title>
+	</head>
+
+	<!-- Body section hold all elements that show up to user -->
+	<body>
+		<!-- 'div' used as container for all sorts of elements, layout, and formatting -->
+		<div>
+			<!-- heading tags run 'h1' - 'h6'; Font sizes change; used to organized SEO information -->
+			<h1>Some Generic Text in H1 tag</h1>
+			<p>Some more generic text in a p tag...</p>
+			<!-- 'break' (br) is self closing tag; break tags can stack, leaving more space between elements -->
+			<br />
+			<!-- Some Generic Tag Styling -->
+			<h2>Some Strong Text in H2 tag</h2>
+			<p>Some <strong>Strong text</strong> in p tag</p>
+			<!-- Inline CSS goes after the 'style' attribute; -->
+			<h3 style="font-family:serif; color=green; font-size=50px;">Style Tags and some Light Inline CSS</h3>
+			<p>Some <b>Bold text</b> in a p tag</p>
+			<p>Some <u>underlined text</u> in a p tag</p>
+			<p>Some <i>Italic Text</i> in a p tag</p>
+		</div>
+
+		<div>
+			<h2>Unordered List</h2>
+				<ul> <!-- Lists via Bullet points -->
+					<li>first element of unordered list</li>
+					<li>second element of unordered list</li>
+					<li>third element of an unordered list</li>
+				</ul>
+			<h2>Ordered Lists</h2>
+				<ol> <!-- lists via numbers -->
+					<li>first element of ordered list</li>
+					<li>second element of ordered list</li>
+					<li>third element of an ordered list</li>
+				</ol>
+		</div>
+		<div>
+<hr>
+			<h2>Working with Images</h2>
+			<!-- 'src' is image source, set 'height' and 'width' values, make sure to add 'alt' attribute for accessability-->
+			<img src="https://www.pinclipart.com/picdir/middle/97-977365_green-lantern-corps-symbol-fill-by-mr-green.png" width="500" height="500" alt="Green Lantern Logo" />
+		</div>
+<hr>
+		<div>
+			<h2>Links</h2>
+			<!-- 'href' for link address, 'target' for where the page should open (i.e. new tab or new window), 'title' helps with SEO -->
+			<p>See page source for details on how to add links,
+			<a href="http://www.udemy.com" target="_blank" title="Udemy">Like This One</a>.</p>
+		</div>
+
+		<div>
+			<h2>Forms</h2>
+			<p>See Source Info for how to create Forms</p>
+
+			<!-- FORM: set 'name', 'method', and 'action' to set up -->
+			<form name="initialForm" method="post" action="#">
+				First Name: <input type="text" width="250" name="firstName" />
+				<br/><br/>
+
+				<!-- type='text' for generic text entry -->
+				Last Name: <input type="text" width="250" name="lastName" />
+				<br/><br/>
+
+				<!-- type="email" to verify email formatting -->
+				Email: <input type="email" width="250" name="emailAddress" />
+				<br/><br/>
+
+				<!-- type="password" to block out input (privacy) -->
+				Password: <input type="password" width="250" name="password" />
+				<br/><br/>
+
+				<!-- 'select' tag to create dropdown options -->
+				State:
+				<select>
+					<option name="Illinois">Illinois</option>
+					<option name="Missouri">Missouri</option>
+					<option name="Ohio">Ohio</option>
+				</select>
+				<br/><br/>
+
+				<!-- type="date" to create/autopopulate calendar -->
+				Date: <input type="date" />
+				<br/><br/>
+
+				<!-- 'textarea' to create box for unspecified text input, will also let you set rows and columns -->
+				Comments: <textarea name="comments" cols="20" rows="10"></textarea>
+				<br/><br/>
+
+				<!-- type="button" to create button; attach to JS function to add functionality -->
+				<input type="button" value="Submit" name="submitButton"/>
+			</form>
+		</div>
+	</body>
+</html>

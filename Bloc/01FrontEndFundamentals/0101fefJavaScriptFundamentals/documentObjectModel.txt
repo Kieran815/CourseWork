@@ -1,0 +1,14 @@
+// 1. DOM is Document Object Model. It lists the entire webpage as one JS item.
+// 2. The DOM makes it easier to find elements, classes and ID's, among other
+// parts of the HTML elements in the webpage.
+
+
+//Using createElement and getElementById. Add a new Shirt to the ul.
+// Set the innerText equal to 'Mens T-shirt'.
+
+var newLi = document.createElement('li')
+newLi
+var newList = document.getElementById('list')
+newList
+newList.appendChild(newLi)
+newLi.innerText = 'Men\'s T-Shirt'

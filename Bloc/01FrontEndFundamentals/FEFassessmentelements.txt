@@ -1,0 +1,22 @@
+describe differenc concepts in js
+var
+array
+ function
+conditionals
+
+basic js
+if ifelse
+functions
+
+html tags
+
+basic github flow
+
+css selectors
+
+read code, console.log()
+
+exercises
+
+root through arrays = api call
+for loop

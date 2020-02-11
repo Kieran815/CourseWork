@@ -1,0 +1,32 @@
+// 1. What is recursion?
+//    A recursion is an operation where a function calls itself over and over
+// until it hits a designated milestone or outcome.
+
+// 2. When would a programmer want to write a recursive function instead of an
+// iterative one?
+//    When programming a countdown or exponential growth of an object. I could
+// see how this would be useful in data science, in that you can look at a data
+// set and look at marco or micro growth or decline of an object.
+
+// 3. What is a base case and what is its role in a recursive function?
+//    A base case is the comparison that you are running the function against.
+// 'If so-and-so doesn't meet a condition, run again.'
+
+// 4. What would happen if a programmer did not utilize a base case within a
+// recursive function?
+//    If a program ran without a base case, it would likely cause a program or
+// full-system crash.
+
+// CODE PRACTICE
+// Create a recursive function that will take a positive integer parameter n and
+// return the factorial of n.
+
+function factorialize(num) {
+  if (num < 0)
+    return -1;
+  else if (num == 0)
+    return 1;
+  else {
+    return (num * factorialize(num - 1));
+  }
+}

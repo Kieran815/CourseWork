@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+	<head>
+		<meta charset="utf-8">
+		<title>Arrays</title>
+	</head>
+	<body>
+		<!-- `p` content will not render due to `.innerHTML` actions in script tags -->
+		<div id="superPeople">
+			<p>Original Array:</p>
+			<p id="origArray">Original Array</p>
+<br>
+
+			<p>Add or Remove Via Bracket Notation</p>
+			<p id="bracketAdd">Add Via Bracket Notation</p>
+<br>
+
+			<p>Remove via Bracket Notation</p>
+			<p id="bracketDelete">Remove via Bracket Notation</p>
+<br>
+
+			<p>Add using `.push`</p>
+			<p id="pushArray">Add using `.push`</p>
+<br>
+
+			<p>Remove using `.pop`</p>
+			<p id="popArray">Remove using `.pop`</p>
+<br>
+
+			<p>Remove element from beginning using `.shift`</p>
+			<p id="shiftArray">Remove element from beginning using `.shift`</p>
+<br>
+
+			<p>Add Element to beginning of array using `.unshift`</p>
+			<p id="unshiftArray">Add Element to beginning of array using `.unshift`</p>
+<br>
+
+			<p>Cut array using `.splice(start index, cutTo index)`</p>
+			<p id="spliceArray">Cut array using `.splice(start index, cutTo index)`</p>
+<br>
+
+			<p>Can also add using `.splice`</p>
+			<p id="addSplice"></p>
+<br>
+
+
+		</div>
+
+		<div class="inputField">
+			<input type='text' id="character"> <br>
+			<button id="addCharacter" onclick='addHero()'>Add Hero</button>
+
+			<p id="newHeroArray">New Heroes Here</p>
+
+		</div>
+
+		<script type="text/javascript">
+			var myArray = ['Batman', 'Green Lantern', 'Max Lord']
+
+			//document.write(myArray);
+			//document.write(myArray[1]);
+			document.getElementById('origArray').innerHTML = myArray;
+
+			// can add or remove via bracket notation
+			myArray[3]='Iron Man';
+			document.getElementById('bracketAdd').innerHTML = myArray;
+
+			delete myArray[3];
+			document.getElementById('bracketDelete').innerHTML = myArray;
+
+			// .push to add item to end of array
+			myArray.push('Atrocitous');
+			document.getElementById('pushArray').innerHTML = myArray;
+
+			// .pop to remove item from end of array
+			myArray.pop();
+			document.getElementById('popArray').innerHTML = myArray;
+
+			// .shift to remove item from beginning of array
+			myArray.shift();
+			document.getElementById('shiftArray').innerHTML = myArray;
+
+			// .unshift to add item to beginning of array
+			myArray.unshift('Atrocitous');
+			document.getElementById('unshiftArray').innerHTML = myArray;
+
+			// splice to cut Arrays
+			myArray.splice(0,2);
+			document.getElementById('spliceArray').innerHTML = myArray;
+
+			myArray.splice(1,0, "WonderWoman");
+			document.getElementById('addSplice').innerHTML = myArray;
+
+			var newHeroArray = [];
+
+
+			function addHero(hero) {
+				let pushHero = document.getElementById('character').value;
+				newHeroArray.push(pushHero);
+				document.getElementById('newHeroArray').innerHTML = newHeroArray;
+				console.log('Hero Added');
+				console.log(newHeroArray);
+			}
+
+		</script>
+	</body>
+</html>

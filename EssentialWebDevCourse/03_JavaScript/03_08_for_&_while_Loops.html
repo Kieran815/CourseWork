@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+	<head>
+		<meta charset="utf-8">
+		<title>For and While Loops</title>
+		<style media="screen">
+
+		</style>
+	</head>
+	<body>
+		<div id="whoIsRob"></div>
+
+		<div id="leadersContainer">
+			<h3>For Loops:</h3>
+			<p> (see devtools and source)</p>
+			<div id="forCorpsLeaders"></div>
+		</div>
+
+		<div id="leadersContainer2">
+			<h3>While Loops</h3>
+			<div id="gl2814"></div>
+		</div>
+
+		<div id="messageBox">
+			<h2>While Loops: Can the Computer Guess Your Number???</h2>
+			<p>Select a Number 1-10.</p>
+			<input type="number" id="myNumber">
+			<br>
+			<button type="submit" id="guessNumber">Guess the Number</button>
+		</div>
+
+		<script type="text/javascript">
+// For Loops... Iterate through SET NUMBER of instances
+			console.log(forLoop);
+			function forLoop() {
+				for(var i = 0; i < 10; i++) {
+					console.log(i);
+				}
+			}
+			forLoop();
+//---------------------------------------------------------------
+			function fuckThisGuy() {
+				const thisGuyIsATool = ['Hello ', 'Robert ', 'Is ', 'A ', 'Tool'];
+				let whoIsRob = '';
+				for (var x = 0; x < thisGuyIsATool.length; x++) {
+					whoIsRob = whoIsRob + thisGuyIsATool[x];
+				}
+				document.getElementById('whoIsRob').innerHTML = whoIsRob;
+			}
+			fuckThisGuy();
+//---------------------------------------------------------------
+			var lightLeaders = ['Hal Jordan', 'Atrocitous', 'Thall Sinestro', 'Larfleez', 'Saint Walker', 'Carol Danvers', 'Indigo-1']
+			var forLeaderList = "<ul>";
+			for (var l = 0; l < lightLeaders.length; l++) {
+				document.getElementById('forCorpsLeaders').innerHTML = forLeaderList = forLeaderList + "<li>" + lightLeaders[l] + "</li>";
+			}
+			forLeaderList = forLeaderList + "</ul>";
+//---------------------------------------------------------------
+// While Loops... Iterate till Conditions are met
+			console.log(whileLoop);
+			function whileLoop() {
+				j = 0;
+				while (j < 10) {
+					console.log(j);
+					j++;
+				}
+			}
+			whileLoop();
+//----------------------------------------------------------------------
+			var greenLanterns = ['Hal Jordan', 'John Stewart', 'Guy Gardner', 'Kyle Rayner'];
+			var glEarth = "<ul>";
+			w = 0;
+			while (w < greenLanterns.length) {
+				document.getElementById('gl2814').innerHTML = glEarth = glEarth + "<li>" + greenLanterns[w] + "</li>";
+				w++;
+			}
+			glEarth = glEarth + "</ul>";
+//----------------------------------------------------------------------
+// Number Guessing Game
+			var numberGuessed;
+			var compGuess;
+			var compCorrect = false;
+			compAttempt = 0;
+
+			document.getElementById('guessNumber').onclick = function() {
+				compGuess = (Math.random() * 10);
+				compGuess = Math.floor(compGuess + 1);
+
+				numberGuessed = parseInt(document.getElementById('myNumber').value);
+				if (numberGuessed === compGuess) {
+					alert('Computer\'s Guessed the Right Number!!! On The First Try!!!');
+				} else {
+					while(compCorrect == false) {
+						compGuess = (Math.random() * 10);
+						compGuess = Math.floor(compGuess + 1);
+						alert('Computer\'s Guess is: ' + compGuess);
+						compAttempt++;
+						if (numberGuessed == compGuess) {
+							computerCorrect = true;
+							alert('Computer\'s Guessed the Right Number!!! It Only took ' + compAttempt + ' tries!!!');
+							break;
+						}
+					}
+				}
+				//alert("Number Input: " + numberGuessed);
+				//alert("Computer Guessed: " + compGuess);
+			}
+
+		</script>
+	</body>
+</html>

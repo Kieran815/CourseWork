@@ -1,0 +1,67 @@
+1. Using proper pseudo-code, describe the following primitive algorithms:
+
+Making coffee;
+Washing dishes;
+A choice of your own.
+------------------------------------------------------------------
+Coffee:
+
+GET coffeeMaker, water, milk, sugar, grounds(keurig), cup, spoon
+  SET coffeeMaker
+    ADD water,
+    ADD grounds(keurig) to coffeeMaker;
+    SET cup for OUTPUT
+      WHILE coffeeMaker is running
+        RUN different sequence
+      ENDWHILE
+  OBTAIN cup from coffeeMaker
+    ADD milk,
+    ADD sugar,
+    ADD spoon;
+    INIT stir;
+    INIT enjoy;
+------------------------------------------------------------------
+Washing dishes:
+
+GET drainPlug, soap, dirtyDishes, dryRack
+  SET sink
+    PUT drainPlug in sink(drain),
+    PUT soap in sink,
+    INIT water(hot);
+  ADD dirtyDishes
+  INIT scrub
+    WHILE dirtyDishes greater than zero
+      RUN wash(dirtyDishes)
+      PUT on dryRack
+    ENDWHILE
+  LET airDry;
+------------------------------------------------------------------
+Change Baby:
+
+GET  stinkyButt, dirtyDiaper freshDiaper, wipes
+INIT changingTable
+  PUT stinkyButt
+    DECREMENT dirtyDiaper
+    RUN clean
+      REPEAT wipes
+      UNTIL blank
+    END
+  RUN resetButt
+    INCREMENT cleanDiaper
+  CHECK config for adjustments and re-render
+END
+-----------------------------------------------------------------
+2. As with the knot algorithm, there may be more than one way to solve the problem. It is essential to try to pick the best algorithm for a situation. Name three companies who created an algorithm that made them successful, e.g., Google's search algorithm. It doesn't need to be a tech example (such as a recipe or manufacturing a product). Google's algorithm produces more relevant results than other search engines; what about each of your cases make them stand out?
+
+McDonald's Speedy System:
+introduced mass-production means to cooking food, enabling them to serve billions worldwide. Simple series of steps that set a precedent for mass-service in the future.
+
+Amazon AVS:
+Alexa speech-recognition is based on Alexa Voice Sevices and cloud computing. It listens for your command, records it, sends that recording data through the cloud to AVS, where it is converted to something Alexa can interpret, then sends the answers of the interpreted command back to the Alexa device.
+
+Facebook Algorithm:
+Facebook's Algorithm is used for ranking and displaying content in your News feed based on inventory of posts as well as it's predictions of what you will like based on previous posts you have responded to.
+------------------------------------------------------------------
+3. Hypothesize about what constitutes an efficient algorithm versus an inefficient algorithm.
+
+Algorithm efficiency is based on order and how quickly it can push out correct results. So regardless of how an algorithm is written, the most efficient (speed and result accuracy) formula will be the winner. Ideally, you would take the one with the fewest lines to run through, and make sure you test it thoroughly to solve any errors before production. You would also want to make sure that the formula doesn't use up more system resources than it should, to enable other sections of the program/system to run efficiently as well.

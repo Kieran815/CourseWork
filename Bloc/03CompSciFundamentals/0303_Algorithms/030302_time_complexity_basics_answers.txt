@@ -1,0 +1,93 @@
+1. What is time complexity and what is its relation to algorithms?
+
+  Time complexity is used to describe the efficiency of an algorithm. It is expressed as a function that estimates the time it would take to execute a program. Algorithm's speed changes based on input size, and you want an algorithm that can process huge amounts of data quickly. Time complexity is estimated by assuming that the input is INFINITE, so it gives you a good idea of what the worst case scenario would be.
+-----------------------------------------------------------------
+
+2. What is runtime?
+
+  Runtime can refer to the actual real-time of an algorithm running, and is often synonymous with Time Complexity.
+------------------------------------------------------------------
+
+3. How is the runtime of an algorithm calculated?
+
+  O(f(n))
+  It seems to only matter how many times the function has to run through to execute before outputting results.
+  You look at the total number constant statements, plus the number of linear executions the function run per linear statement. This give you a formula of (totalConstants) + (linearCalls) + (linearCalls) + ... + (linearCalls). Since the totalConstants are only used once, you can scrap that whole list, leaving you with just the total number of linearCall operations your formula needs to run through. This leaves you with an Order of Linear Calls, or O(n).
+------------------------------------------------------------------
+
+4. Name the six types of algorithm growth rates we saw in this checkpoint and list them in order of most efficient to least efficient. Now Google another algorithmic growth rate not covered and place it in the correct spot in your list.
+
+O(1), Constant Growth Rate
+O(log n), Logarithmic Growth Rate
+O(n), Linear Growth Rate
+O(n log n), Log-Linear Growth Rate
+O(n^2), Quadratic Growth Rate
+O(n^3) Cubic growth
+O(2^n),  Exponential Growth Rate
+------------------------------------------------------------------
+
+5. Choose one of the algorithmic growth rates from the last question and make a comparison to a real-life situation.
+
+Quadratic Equations can be used to factor how many of an item a business needs to produce to turn a profit.
+-----------------------------------------------------------------
+6. Determine the time complexity of the following snippet of code. It is commonly known as a linear search.
+
+FUNCTION linearSearch(array, target)
+ FOR each number in the array
+   IF number = target THEN
+     RETURN true
+   END IF
+ END FOR
+ RETURN false
+END FUNCTION
+
+  This would be an O(n), because it has to run through the entire array one time, so it depends on how many items are in the array. If the array has 10 items and the target was 5, you would return:
+    FALSE
+    FALSE
+    FALSE
+    FALSE
+    TRUE
+    FALSE
+    FALSE
+    FALSE
+    FALSE
+    FALSE
+
+    or O(10).
+  Constant Growth Rate
+  The time complexity of the function linearSearch is O(1).
+------------------------------------------------------------------
+7. Determine the time complexity of the following snippet of code.
+  If you get stuck, read through the graphical representation section again.
+
+    FUNCTION foo(array)
+     FOR each number in the array
+       FOR each number in the array
+         print "Hello"
+       END FOR
+     END FOR
+    END FUNCTION
+
+  Quadratic Growth Rate
+  The time complexity of the function foo is O(n^2).
+------------------------------------------------------------------
+8. Determine the time complexity of the following snippet of code. It is commonly known as the Fibonacci sequence.
+
+FUNCTION fibonacci(number)
+ IF number < 1 THEN
+   ERROR
+ ELSE IF number = 1 or 2 THEN
+   RETURN 1
+ ELSE
+   CALL fibonacci WITH number - 2 RETURNING twoBack
+   CALL fibonacci WITH number - 1 RETURNING oneBack
+   RETURN twoBack + oneBack
+ END IF
+END FUNCTION
+
+  Exponential Growth Rate
+  The time complexity of the function fibonacci is O(2^n).
+-----------------------------------------------------------------
+9. Out of the code snippets you just saw, which is the most time efficient?
+
+ Linear Growth Rate O(n) is the most efficient because regardless of how many items are in the array, the time complexity is constant.

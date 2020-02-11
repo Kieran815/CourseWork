@@ -1,0 +1,16 @@
+var grade = 100
+	if (grade <= 100 || grade >= 90) {
+		console.log('You Passed!!! Great Job!!!');
+	}
+	else if (grade <= 89 || score >= 80) {
+		console.log('You got a B.');
+	} 
+	else if (grade <= 79 || grade >= 70) {
+		console.log('You got a C.');
+	}
+	else if (grade <= 69 || grade >= 60) {
+		console.log('You got a D...');
+	}
+	else (grade < 60) {
+		console.log('Wft....');
+	}

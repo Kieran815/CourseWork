@@ -1,0 +1,56 @@
+// Create a Computer class that takes the brand and model of a computer in the
+// constructor and sets those inputs to this.computerBrand and this.computerModel.
+
+class Computer {
+  constructor(computerBrand, computerModel) {
+    this.computerBrand = computerBrand;
+    this.computerModel = computerModel;
+  }
+  getItemInfo() {
+    return `${this.computerBrand} ${this.computerModel}`;
+  }
+}
+
+class Rig extends Computer {
+  constructor() {
+    super("Lenovo", "IdeaPad");
+  }
+}
+
+var r = new Rig();
+console.log(r.getItemInfo)
+
+/* 1. What is object-oriented programming?
+ OOP is a model that puts emphasis on objects in the program instead of
+ logic. I would equate this to how JavaScript has you create objects that
+ contain functions and inputs that get saved as other variables for use
+ in other areas of the program.*/
+
+// 2. What is a constructor?
+// `constructor`s are the individual categories that make up a `class`.
+
+// 3. What is the purpose of the keyword super?
+// `Super` calls the parent `constructor`, or `class`, to the child subclass.
+
+// 4. What are classes that do not use the keyword extends called?
+// Parent Classes.
+
+
+/*Code Practice
+Using the Clothes class we previously created, create a Shirt class that extends
+the Clothes class. Don't forget the super().
+*/
+
+var Clothes = class {
+    constructor(name, size, price){
+        this.name = name;
+        this.size = size;
+        this.price = price;
+    }
+}
+// add code below
+
+class Shirt extends Clothes {
+  constructor() {
+    super("Men's T Shirt", "Medium", "$20");
+  }

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+	<head>
+		<meta charset="utf-8">
+		<title>Color Guessing Game</title>
+
+		<style media="screen">
+
+			#colorBlock {
+				height: 200px;
+				width: 200px;
+				margin-left: auto;
+				margin-right: auto;
+				display: none;
+			}
+
+			#dotBox {
+				height: 200px;
+				width: 200px;
+				border: dotted;
+				margin-left: auto;
+				margin-right: auto;
+			}
+
+		</style>
+
+	</head>
+
+	<body>
+
+		<div class="selections" style="padding: 15px;">
+			Guess a Color:
+<br>
+<br>
+			<select id="colors">
+				<option value="green">Green</option>
+				<option value="yellow">Yellow</option>
+				<option value="red">Red</option>
+				<option value="orange">Orange</option>
+				<option value="blue">Blue</option>
+				<option value="purple">Purple</option>
+			</select>
+<br>
+<br>
+			<button type="button" id="submit" onclick="colorTest()">Play</button>
+		</div>
+
+		<div id="dotBox">
+			<div id="colorBlock">
+
+			</div>
+		</div>
+<br>
+		<div id="reload">
+			<button type="button" id="replay" onclick="window.location.reload();">Play Again???</button>
+		</div>
+		<script type="text/javascript">
+
+			function randomColor() {
+				let colorArray = ["green", "yellow", "red", "orange", "blue", "purple"];
+				let rand = colorArray[Math.floor(Math.random()*colorArray.length)];
+				document.getElementById('colorBlock').style.background = rand;
+			}
+
+			randomColor();
+
+			function colorTest() {
+				document.getElementById('colorBlock').style.display = 'block';
+				let color = document.getElementById('colors').value;
+
+				let answer = document.getElementById('colorBlock').style.background;
+
+				if (color == answer) {
+					alert('You Chose Wisely. The Color is ' + answer);
+				} else {
+					alert('You Chose Poorly. The Color is ' + answer);
+				}
+			}
+
+
+		</script>
+
+	</body>
+</html>

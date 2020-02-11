@@ -1,0 +1,30 @@
+1. The three types of conditional statements are `if`, `else`, or `else if`.
+
+2. The four types of comparison operators are as follows:
+	Equality Operateor and Strict Equality Operator: `==` and `===`
+		Equality Operator compares two values and returns `true` if they are equivalent or `false` if they are not;
+		Strict Equality Operator tests both the Value and the Data type (i.e. string, var, etc.)
+	Inequality Operator and Strict Inequality Operator: `!=` and `!==`
+		Inequality Operator checks to see if the values are "Not Equal"
+		Strict Inequality Operator does the same, but will not convert data types.
+	Greater Than (or Equal To) Operator: `>` and `>=`
+		Greater Than compares two numbers and is a boolean (will return `True` if a>b and `False` if a<b.
+		Greater Than or Equal To compares two numbers and will return `True` if the listed value is given.
+	Less Than (or Equal To) Operator: `<` or `<=`
+		Less Than compares two numbers and is a boolean ( will return `True` if a<b and `False` if a>b)
+		Less Than of Equal To compares two numbers and will return `True` if the listed value is given.
+
+```
+var grade = prompt('How did you do?');
+	if (grade == 'A') {
+		console.log('An A!!! Great Job!!!');
+	} else if (grade == 'B') {
+		console.log('You got a B. Good Work');
+	} else if (grade == 'C') {
+		console.log('You got a C. Maybe study more...');
+	} else if (grade == 'D') {
+		console.log('You got a D....');
+	} else {
+		console.log('Wft....');
+	}
+```

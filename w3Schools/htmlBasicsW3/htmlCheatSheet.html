@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+
+<html lang="en-US">
+
+<head> <!--`head` element holds metadata for site; not displayed;-->
+  <title>HTML Cheat Sheet</title> <!--shows up in page tab at top-->
+  <meta charset="utf-8"> <!--Metadata typically define the document title,
+    character set, styles, links, scripts, and other meta information.-->
+  <style>
+  #idEx { <!-- use # to specify id name on html doc -->
+    color: yellow;
+    padding: 40px;
+    text-align: center:
+  }
+  </style>
+  <!--external CSS links to .css file for styles-->
+  <link rel="stylesheet" href="cssCheatSheet.css">
+</head>
+
+<body>
+
+<!--how to write Source info for JavaScript pages-->
+<script src="jsBasicsW3/index.js" charset="utf-8"></script>
+
+<!--Creating Page Bookmarks using 'href="#inName"-->
+<a href="#Basic Elements">Basic Elements</a>
+<a href="#Lists">Lists</a>
+<a href="#Paragraph Formatting">Paragraph Formatting</a>
+<a href="#Style">Style</a>
+<a href="#Text Formatting">Text Formatting</a>
+<a href="#Images">Images</a>
+<a href="#Iframes">Iframes</a>
+<a href="#JavaScript">JavaScript</a>
+<a href="#HTMLTables">HTML Tables</a>
+
+<div class="divEx">
+  <h1 id="Basic Elements">Heading One: Basic Elements </h1> <!--(h1 = Most Important)-->
+    <p>Paragraph One: Links</p> <!--see cssCheatSheets.css for how to style links-->
+      <a title="the 'title' attribute creates a tooltip" href="https://www.nbcnews.com/">Visit NBCNews.com for the latest.</a>
+    <p>Paragraph Two: Images</p>
+      <img src="images/PlayTablet.jpg" alt="playing tablet" width="170" height="160">
+    <p>Paragraph Three: HTML Buttons</p>
+      <button>inspect Me for Button Tags</button>
+</div>
+<hr> <!--Horizontal Rules: Create thematic page breaks in HTML-->
+
+  <h2 id="Lists">Heading Two: Lists</h2>
+    <p>Paragraph One: Unordered Lists</p>
+      <ul style="color:white">
+        <li>Milk</li>
+        <li>Bread</li>
+        <li>Eggs</li>
+      </ul>
+    <p>Paragraph Two: Ordered Lists</p>
+      <ol style="color:white">
+        <li>Milk</li>
+        <li>Bread</li>
+        <li>Eggs</li>
+<hr>
+
+
+<h3 id="Paragraph Formatting">Heading Three: Paragraph Formatting</h3>
+  <p>Paragraph One<br>incorporates<br>Line Breaks</p>
+  <p>The next Paragraph incorporates the `pre` element tag:</p>
+ <!-- `pre` keeps exact paragraph format for everything between tags-->
+  <pre style="color: darksalmon">
+    My Bonnie lies over the ocean.
+
+    My Bonnie lies over the sea.
+
+    My Bonnie lies over the ocean.
+
+    Oh, bring back my Bonnie to me.
+  </pre>
+<hr>
+
+
+<h4 id="Style" style="font-size:40px;">Heading Four: `Intro to Style`</h4>
+  <!-- Style syntax example: <tagname style="property:value;" -->
+    <p style="color:green;">Paragraph One: Font Color is Green</p>
+      <!--HTML supports 140 standard color names.-->
+    <p style="font-size:30px;">30px font-size</p> <!-- set font size-->
+    <p style="background-color:purple;">Changing Paragraph Background Colors</p>
+    <p style="font-family:courier;">This is courier font.</p> <!--changes font-->
+    <p style="font-family:verdana;">This is verdana font.</p>
+    <p style="text-align:center;">This Paragraph is Center aligned.</p>
+    <p style="border:2px solid darkgreen;">You can also add borders</p>
+<hr>
+
+
+
+  <h5 id="Text Formatting">Heading Five: Text Formatting</h5>
+    <p>Paragraph One:
+<br>
+      <b>this text is BOLD</b>
+<br>
+ <!-- <strong> adds semantic importance -->
+      <strong>this text is STRONG</strong>
+    </p>
+
+    <p>Paragraph Two:
+<br>
+      <i>this text is italic</i>
+<br>
+ <!-- <em> adds semantic importance -->
+      <em>this text is emphasized</em>
+<!--<strong> and <em> means that the text is "important".-->
+    </p>
+
+    <pre>
+Paragraph Three is using Pre:
+this text is <small>small</small>
+this text is <mark>highlighted</mark> or <mark>marked</mark>
+this text is <del>striked out to be removed/edited</del> deleted
+<!--The ins element represent inserted (added) text.-->
+this text has been <ins>inserted</ins>
+this text is <sub>subscripted</sub>
+this text is <sup>superscripted</sup>
+<!-- <q> is used so you don't have to use '' or "" in script-->
+this is how you properly quote something/one in html: <q>I am Iron Man</q>
+Mark abbreviations like <abbr title="National Broadcasting Company">NBC</abbr> to help search engines and browsers
+</pre>
+<p>Paragraph Four: How to do a block quote</p>
+<blockquote>“It was unfair that people who longed for love the most, searched the hardest for it, found it so elusive.”
+― Lisa Kleypas, Tempt Me at Twilight</blockquote>
+
+<hr>
+
+<div class="divEx">
+  <h6 id="Images">Heading Six: Images</h6> <!--(h6 = Least Important)-->
+    <img src="images/PlayTablet.jpg" alt="playing tablet" style="width:500px;height:500px;">
+      <!--Image source in same folder, just have to put file name-->
+      <!--used style: prevents css changing image sizes and distortions-->
+    <img src="images/VisitSanta.jpg" alt="Seeing Santa" width="500" height="370">
+      <!--using width and height is always measured in pixels-->
+      <p>The Following Image is a Link</p>
+      <a href=https://www.facebook.com/photo.php?fbid=10209668593104536&set=t.1620773011&type=3&theater>
+        <img src="images/AllTheBabies.jpg" alt="All my Babies" style="width:100px;height:100px;border:0">
+      </a>
+    <p><img src="images/GreenLanternLogo.jpg" alt="Willpower, Mother Fucker." style="float:left;Width:40px;height:40px;">See "Source" for how to float text to the left or right of a document.;</p>
+<br>
+    <p style="text-align:left"><img src="https://media.giphy.com/media/3oriO6qJiXajN0TyDu/giphy.gif" alt="Cool Gif" style="width:200px;height:200px;">Add GIF files just like regular Images</p>
+</div>
+<hr>
+
+<!--and back aroung to...-->
+<h1 id="Iframes">Heading One.2: Iframes</h1>
+<!-- Used to display a webpage within a webpage -->
+  <iframe src="https://www.nbcnews.com/" name="iframe_a" height="200" width="600" style="border:2px solid red;"></iframe>
+<!-- select and iframe (name) to open a link inside the selected iframe-->
+  <p><a href="https://www.w3schools.com/w3css/" target="iframe_a">Visit CNN.com</a></p>
+<hr>
+
+
+<h2 id="JavaScript">Heading Two.2: JavaScript</h2>
+
+<p id="JSintro"></p>
+<!--The <script> element either contains scripting statements, or it points to
+ an external script file through the src attribute.-->
+<script>
+document.getElementById("JSintro").innerHTML = "JavaScript is Object Oriented Programming. Create Objects to assign values and functions to them and make the webpage interactive. It's pretty legit.";
+</script>
+
+<button type="button" onclick="document.getElementById('JSintro').innerHTML = Date()">
+Have you got the Time?</button> <!--assign actions to elements to get interactive-->
+
+<p>There will be attached .js files in the project folder when I go through JS next.</p>
+
+
+
+<hr>
+
+
+
+
+  <h3 id="HTML Tables">Heading "nan".2: HTML Tables</h3>
+      <table title="Milligan Children" style="100%">
+        <!--Caption creates a text title for the table-->
+        <caption style='color:white';>Milligan Spawn</caption>
+        <tr> <!--sets up format for table rows and headers-->
+          <th>First Name</th>
+          <th>Middle Name</th>
+          <th>Birth Date</th>
+        </tr>
+        <tr>
+          <td>Kieran</td>
+          <td>Michael</td>
+          <td>December 28, 1984</td>
+        </tr>
+        <tr>
+          <td>Bethany</td>
+          <td>Kristen</td>
+          <td>January 8, 1981</td>
+        </tr>
+        <tr>
+          <td>Nicholas</td>
+          <td>Alexander</td>
+          <td>January 7, 1979</td>
+        </tr>
+
+</body>
+
+</html>

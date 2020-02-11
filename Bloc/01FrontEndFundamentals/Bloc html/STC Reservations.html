@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Sauk Trail Cafe - Reservations</title>
+	</head>
+	<body>
+		<header>
+			<i><b>Sauk Trail Cafe</b/> - When Can We Expect You?</i>
+			<nav>
+            <ul>
+                <li><a href='/index.html'>Home</a></li>
+                <li><a href='/about.html'>About</a></li>
+                <li><a href='/contact.html'>Contact</a></li>
+                <li><a href='/prices.html'>Best Prices in Town</a></li>
+            </ul>
+        </nav>
+		</header>
+<br>
+<!--First, Last, Email, phone, <select> menu w/ times, <textarea> for notes, submit button-->
+		<form action="form.php" method="post">
+			<legend><b>Who will be joining us?</b></legend>
+			<fieldset>
+				<label for="nameInput">First Name:</label>
+				<input type="text" id="nameInput">
+			</fieldset>
+			<fieldset>
+				<label for="nameInput">Last Name:</label>
+				<input type="text" id="nameInput">
+			</fieldset>
+			<fieldset>
+				<label for="telInput">Phone Number:</label>
+				<input type="tel" id="telInput">
+			</fieldset>
+			<fieldset>
+				<label for="emailInput">Email:</label>
+				<input type="email" id="emailInput">
+			</fieldset>
+			<fieldset>
+				<label for="rangeInput">Number of Guests (up to 20):</label>
+				<input type="text" id="guests" min="1" max="20">
+			</fieldset>
+			<fieldset>
+				<label for="times">Dining at:</label>
+
+					<select id="times">
+						<option value="">--Please choose an option--</option>
+						<option value="11:00">11:00am</option>
+						<option value="11:30">11:30am</option>
+						<option value="12:00">12:00pm</option>
+						<option value="13:00">1:00pm</option>
+						<option value="13:30">1:30pm</option>
+						<option value="14:00">2:00pm</option>
+						<option value="14:30">2:30pm</option>
+						<option value="15:00">3:00pm</option>
+						<option value="15:30">3:30pm</option>
+						<option value="16:00">4:00pm</option>
+						<option value="16:30">4:30pm</option>
+						<option value="17:00">5:00pm</option>
+						<option value="17:30">5:30pm</option>
+						<option value="18:00">6:00pm</option>
+						<option value="18:30">6:30pm</option>
+						<option value="19:00">7:00pm</option>
+						<option value="19:30">7:30pm</option>
+						<option value="20:00">8:00pm</option>
+						<option value="20:30">8:30pm</option>
+						<option value="21:00">9:00pm</option>
+						<option value="21:30">9:30pm</option>
+					</select>
+			</fieldset>
+			<fieldset>
+				<label for="textarea">Special Accommodations</label>
+					<textarea cols="50" rows="4">Enter Requests Here</textarea>
+			</fieldset>
+			<fieldset>
+				<label for="submitInput">Confirm Your Reservation</label>
+				<input type="submit" id="submitInput">
+			</fieldset>
+		</form>
+	</body>
+</html>

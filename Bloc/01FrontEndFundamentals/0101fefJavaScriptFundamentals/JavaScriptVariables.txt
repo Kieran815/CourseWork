@@ -1,0 +1,16 @@
+1. camelCasing, i.e. `myName` or `intValue`
+
+2. var mentorName = 'John Flecko';
+
+3. console.log(mentorName);
+
+4. `var` is a constant with a global scope (applies to entire code block or page), `let` allows you to set a var that can change, and `const` is a variable that will not be reassigned.
+
+
+
+Code Practice:
+```
+var name = 'Kieran';
+	const location = 'Illinois';
+	let hairColor = 'Brown';
+```

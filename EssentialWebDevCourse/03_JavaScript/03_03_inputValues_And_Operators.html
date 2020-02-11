@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+	<head>
+		<meta charset="utf-8">
+		<title>Input Values</title>
+
+		<style media="screen">
+
+		</style>
+
+	</head>
+	<body>
+		<div id="messageBox">This is the Message Box</div>
+			<input id="inputBox" value="Add Text Here">
+			<button type="button" id="textClick">Click Me To Add Text!!!</button>
+		</div>
+
+		<div id="addition">This is the addition box</div>
+
+		<div class="additionBox">
+			<input id="inputBox2" type="text" value="10"> + <input id="inputBox3" type="text" value="10">
+			<button type="button" id="addBoxButton">Click Me to Add Numbers</button>
+		</div>
+
+		<script type="text/javascript">
+
+			document.getElementById('textClick').onclick = function() {
+				document.getElementById('messageBox').innerHTML =
+				document.getElementById('inputBox').value;
+			}
+
+			var finalNumber =
+
+			document.getElementById('addBoxButton').onclick = function() {
+				document.getElementById('addition').innerHTML = parseInt(document.getElementById('inputBox2').value) + 		parseInt(document.getElementById('inputBox3').value);
+			}
+		</script>
+	</body>
+</html>

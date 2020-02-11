@@ -1,0 +1,109 @@
+1. What is the main difference between a stack and a queue?
+
+  The differences are in how elements are removed. Stacks are LIFO and queues are FIFO.
+
+2. What are the similarities between stacks and queues?
+
+  They are ususally arrays, and allow access to one data element at a time.
+
+3. Imagine you are an engineer tasked with implementing the UNDO and REDO options in a word processor such as Microsoft Word. Which data structure would you use for each option and why?
+
+  Redo would be LIFO, so you would use a stack to replace the last item removed back into the document.
+  Undo would be a queue because you're holding a list of all the changes and hitting undo would remove the changes you made in a FIFO fashion.
+
+------------------------------------------------------------------
+Programming Questions
+You may program the following question in any language of your choice. Before you begin coding, write out a plan as to how you will solve the question.
+
+
+1. Given a string, reverse it using a stack. For example, the string "Bloc!" should be converted to "!colB".
+
+FUNCTION REVERSE(original)
+  INIT a new stack
+  FOR each character in original
+    CALL stack.push WITH character
+  END FOR
+  INIT reversed to empty string
+  WHILE stack is not empty
+    CALL stack.pop RETURNING character
+    APPEND character to reversed
+  END WHILE
+  RETURN reversed
+END FUNCTION
+
+reverse("Bloc!")
+// should RETURN "!colB"
+
+
+function Switch(original) {
+  var stack = [];
+  var reverse = [];
+
+  for(var character in original) {
+    stack.push(original.charAt(character)); // adds to stack
+  }
+  while(!stack.length == 0 || !stack == undefined) { // prevents action for empty stack
+    temp = stack.pop(); //removes from stack
+    reverse.push(temp); // adds to reverse
+  }
+
+  return reverse;
+}
+
+console.log(Switch("Bloc!"));
+
+2. Implement the pop method of a stack using one queue. Make a FIFO data structure mirror the functionality of a LIFO data structure. Since the internal list is not the same as defined in the checkpoint, it may help to rewrite the pseudocode first.
+
+class Stack {
+  constructor(){
+    this.pop = function(queue){
+      var newQueue = [];
+      var itemToDelete = [];
+
+      for(var i = 0; i < queue.length; i++){
+        if(i == queue.length - 1){
+          itemToDelete.push(queue[i]);
+        } else {
+          newQueue.push(queue[i]);
+        }
+      }
+
+      return itemToDelete;
+    }
+  }
+}
+
+var stack = new Stack();
+
+console.log(stack.pop("Alexxander Milligan"));
+
+
+-----------------------------------------------------------------
+
+1. Implement the enqueue and dequeue methods defined in the checkpoint inside your own Queue class.
+
+function MyQueue() {
+  this.elements = [];
+};
+
+MyQueue.prototype.enqueue = function(e) {
+  this.elements.push(e);
+};
+
+MyQueue.prototype.dequeue = function() {
+  return this.elements.shift();
+};
+
+MyQueue.prototype.isEmpty = function() {
+  return this.elements.length == 0;
+};
+
+var q = new MyQueue();
+
+for (var i = 1; i <= 10; i++) {
+  q.enqueue(i);
+};
+
+while(!q.isEmpty()) {
+console.log(q.dequeue());
+};

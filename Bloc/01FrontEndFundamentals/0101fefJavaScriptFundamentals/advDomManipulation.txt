@@ -1,0 +1,28 @@
+
+// 1. What is the difference between `document.querySelector()` and
+// `document.querySelectorAll()?
+// `document.querySelector()` selects the first instance of an occurrence, while
+// `document.querySelectorAll()` pulls all instances of an occurrence.
+
+// 2. What is the difference between `getElement(s)By` and `querySelector(All)`?
+// `getElement(s)By` only lets you pass a single arguement, while
+// `querySelector(All)` lets you pass multiple arguements. This is helpful,
+// because when working with large websites you can shorten the array to more
+// specific sections or elements in the DOM.
+
+// 3. What do JavaScript event handlers do and what is an example of one?
+// Event Handlers add functionality and interactivity to web-pages by
+// listening for events (click, hover, mouseenter, load, print), then have the
+// browser change attribute(s) of the div or element.
+
+// Using the code from the prior checkpoint, add an Event Handler to the
+// <li> element and console.log() the name of the shirt they selected.
+
+//ADV DOM MANIPULATION CODE:
+
+var liArray = document.getElementsByTagName('li');
+  for(var i = 0; i < liArray.length; i++) {
+  liArray[i].addEventListener('click', function(eventTarget) {
+      console.log(eventTarget.target.innerText);
+  });
+}

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+
+		<style media="screen">
+			#box {
+				width: 200px;
+				height: 200px;
+				background-color: green;
+				margin-bottom: 50px
+			}
+
+			#box2 {
+				width: 200px;
+				height: 200px;
+				background-color: yellow;
+			}
+		</style>
+
+
+	</head>
+
+	<body>
+		<div id="box"></div>
+
+		<div id="box2"></div>
+
+		<script type="text/javascript">
+			<!-- use '.style' to style elements using JS -->
+			document.getElementById('box').onclick = function () {
+				document.getElementById('box').style.border = '20px dotted #000';
+			}
+
+			document.getElementById('box2').onclick = function() {
+				document.getElementById('box2').style.display = "none";
+			}
+		</script>
+	</body>
+</html>

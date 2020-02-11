@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+	<head>
+		<meta charset="utf-8">
+		<title>CNN Clone (Pre-Material Design)</title>
+
+		<style>
+			body {
+				margin: 0;
+			}
+			#container {
+				width: 100%;
+			}
+
+			#headerBg{
+				width: 100%;
+				background-color: #000000;
+				height: 75px;
+			}
+
+			#interior {
+				width: 1100px;
+				margin: 0 auto;
+			}
+
+			#header {
+				width: 100%;
+				height: 90px;
+			}
+
+			#logo {
+				width: 85px;
+				height: 85px;
+				background-image: url('images/cnnLogo.png');
+				float: left;
+				display: inline-block;
+			}
+/*
+			#nav {
+				width: 995px;
+				display: inline-block;
+				float: left;
+				color: #fff;
+				margin-left: 20px;
+			}
+*/
+			#topNav {
+				width: 1015px;
+				height: 40px;
+				background-color: #000;
+				float: left;
+				color: #fff;
+				vertical-align: middle;
+			}
+
+			.topNavFont {
+				/* 'em' refers the default size of the font on the page */
+				font-size: 1.25em;
+				color: #fff;
+				line-height: 1px;
+				vertical-align: middle;
+				font-family: sans-serif;
+				padding-left: 15px;
+				display: inline-block;
+				padding-right: 12px;
+			}
+
+			.greyFont {
+				color: #ccc;
+			}
+
+			#topNavFloatRight {
+				float: right;
+				width: 300px;
+			}
+
+			.topNavRight {
+				/* 'em' refers the default size of the font on the page */
+				font-size: 0.9em;
+				color: #999;
+				line-height: 40px;
+				vertical-align: middle;
+				font-family: sans-serif;
+				padding-left: 15px;
+				display: inline-block;
+				padding-right: 12px;
+				float: left;
+			}
+
+			#bottomNav {
+				width: 1015px;
+				height: 35px;
+				background-color: #ccc;
+				float: left;
+				color: #fff;
+			}
+
+			.bottomNavFont {
+				font-size: 0.95em;
+				color: #222;
+				line-height: 35px;
+				vertical-align: middle;
+				font-family: sans-serif;
+				padding-left: 5px;
+				display: inline-block;
+				padding-right: 5px;
+				font-weight: 400;
+			}
+
+			a.bottomNavFont {
+				font-size: 0.95em;
+				color: #222;
+				line-height: 35px;
+				vertical-align: middle;
+				font-family: sans-serif;
+				padding-left: 15px;
+				display: inline-block;
+				padding-right: 12px;
+				font-weight: 400;
+				text-decoration: none;
+			}
+
+			.bottomNavMoney {
+				background-color: #006598;
+				font-size: 0.95em;
+				color: #fff;
+				line-height: 35px;
+				vertical-align: middle;
+				font-family: sans-serif;
+				padding-left: 15px;
+				display: inline-block;
+				padding-right: 12px;
+				font-weight: 400;
+			}
+
+			.bottomNavTV {
+				background-color: #c00;
+				font-size: 0.95em;
+				color: #fff;
+				line-height: 35px;
+				vertical-align: middle;
+				font-family: sans-serif;
+				padding-left: 15px;
+				display: inline-block;
+				padding-right: 12px;
+				font-weight: 400;
+				float: right;
+				text-decoration: none;
+			}
+
+			a.bottomNavTV {
+				background-color: #c00;
+				font-size: 0.95em;
+				color: #fff;
+				line-height: 35px;
+				vertical-align: middle;
+				font-family: sans-serif;
+				padding-left: 15px;
+				display: inline-block;
+				padding-right: 12px;
+				font-weight: 400;
+				float: right;
+				text-decoration: none;
+			}
+
+			#searchBox {
+				background-color: #000;
+				font-size: 0.95em;
+				color: #fff;
+				line-height: 35px;
+				vertical-align: bottom;
+				font-family: sans-serif;
+				padding-left: 15px;
+				display: inline-block;
+				padding-right: 12px;
+				font-weight: 400;
+				float: right;
+			}
+
+			#searchBox input {
+				height:32px;
+				width: 250px;
+				vertical-align: bottom;
+				line-height: 35px;
+				float: right;
+				display:inline-block;
+				color: #999;
+				font-size: 0.95em;
+				background-color: #333;
+				border: 0;
+				outline: none;
+			}
+
+			/* Main Content Section Styling */
+			#content {
+				width: 100%;
+			}
+
+			#mainLeft {
+				width: 300px;
+				display: inline-block;
+				float: left;
+			}
+
+			.mainLeftHeader {
+				background-color: #f2f2f2;
+				color: #555;
+				border-bottom-width: thin;
+				border-bottom-color: #ccc;
+				border-bottom-style: solid;
+				border-bottom-width: thin;
+				height: 37px;
+			}
+
+			.mainLeftHeaderFont {
+				font-family: sans-serif;
+				line-height: 37px;
+				padding-left: 8px;
+				vertical-align: middle;
+				font-weight: 700;
+				font-size: 1em;
+				width: 300px;
+			}
+
+			.mainLeftItem {
+				background-color: #fff;
+				color: #222;
+				border-top-color: #ccc;
+				border-top-style: solid;
+				border-top-width: thin;
+			}
+			.mainLeftItemFont {
+				font-family: sans-serif;
+				line-height: 20px;
+				width: 90%;
+				vertical-align: middle;
+				font-weight: 300;
+				font-size: 1em;
+			}
+
+			.extraPaddingTop {
+				padding-top: 10px;
+			}
+
+			#mainRight {
+				width: 780px;
+				background-color: green;
+				float: right;
+				display: inline-block;
+				margin-top: 15px;
+			}
+
+			#mainNewsStory {
+				width: 780px;
+				height: 438px;
+				background-image: url('images/greenLanternPic.jpeg');
+				background-size: cover;
+			}
+
+			#mainNewsStoryInfoTop {
+				height: 318px;
+				background-color: transparent;
+			}
+
+			#mainNewsStoryInfo {
+				vertical-align: bottom;
+				height: 120px;
+				background-color: rgba(207, 207, 207, 0.8);
+			}
+
+			#mainNewsLinks {
+				width: 100%
+				padding: 10px;
+				float: left;
+
+			}
+
+			a.big:link {
+				font-size: 2.9em;
+				color: #222;
+				font-family: sans-serif;
+				text-decoration: none;
+				font-weight: 500;
+			}
+
+			a.big:visited {
+				font-size: 2.9em;
+				color: #222;
+				font-family: sans-serif;
+				text-decoration: none;
+				font-weight: 500;
+			}
+
+			a.big:hover {
+				font-size: 2.9em;
+				color: #c00;
+				font-family: sans-serif;
+				text-decoration: none;
+				font-weight: 500;
+			}
+
+			a.big:active {
+				font-size: 2.9em;
+				color: #c00;
+				font-family: sans-serif;
+				text-decoration: none;
+				font-weight: 500;
+			}
+
+			a.medium:link {
+				font-size: 1.7em;
+				color: #444;
+				font-family: sans-serif;
+				text-decoration: none;
+				font-weight: 300;
+			}
+
+			a.medium:visited {
+				font-size: 1.7em;
+				color: #444;
+				font-family: sans-serif;
+				text-decoration: none;
+				font-weight: 300;
+			}
+
+			a.medium:hover {
+				font-size: 1.7em;
+				color: #c00;
+				font-family: sans-serif;
+				text-decoration: none;
+				font-weight: 300;
+			}
+
+			a.medium:active {
+				font-size: 1.7em;
+				color: #c00;
+				font-family: sans-serif;
+				text-decoration: none;
+				font-weight: 300;
+			}
+
+			a.small:link {
+				font-size: 0.9em;
+				color: #006598;
+				font-family: sans-serif;
+				text-decoration: none;
+				font-weight: 700;
+			}
+
+			a.small:visited {
+				font-size: 0.9em;
+				color: #006598;
+				font-family: sans-serif;
+				text-decoration: none;
+				font-weight:7300;
+			}
+
+			a.small:hover {
+				font-size: 0.9em;
+				color: #c00;
+				font-family: sans-serif;
+				text-decoration: none;
+				font-weight: 700;
+			}
+
+			a.small:active {
+				font-size: 0.9em;
+				color: #c00;
+				font-family: sans-serif;
+				text-decoration: none;
+				font-weight: 700;
+			}
+
+		</style>
+	</head>
+
+
+	<body>
+		<!--Good Practice: build WHOLE SITE inside 'container' div-->
+		<div id="container">
+			<div id="headerBg">
+				<div id="interior">
+<!-- Begin Header Section -->
+					<div id="header">
+						<div id="logo"></div>
+
+						<div id="topNav">
+							<div class="topNavFont greyFont">News</div>
+							<div class="topNavFont greyFont">Video</div>
+							<div class="topNavFont greyFont">TV</div>
+							<div class="topNavFont greyFont">Opinions</div>
+							<div class="topNavFont greyFont">More...</div>
+
+							<div id="topNavFloatRight">
+								<div class="topNavRight">U.S. Edition</div>
+								<div class="searchBox">
+									<form>
+										<input value="Search CNN">
+									</form>
+								</div>
+							</div>
+						</div>
+						<div id="bottomNav">
+							<div class="bottomNavFont"><a class="bottomNavFont" href="https://www.cnn.com/us">U.S.</a></div>
+							<div class="bottomNavFont"><a class="bottomNavFont" href="https://www.cnn.com/world">World</a></div>
+							<div class="bottomNavFont"><a class="bottomNavFont" href="https://www.cnn.com/politics">Politics</a></div>
+							<div class="bottomNavFont"><a class="bottomNavFont" href="https://www.cnn.com/tech">Tech</a></div>
+							<div class="bottomNavFont"><a class="bottomNavFont" href="https://www.cnn.com/health">Health</a></div>
+							<div class="bottomNavFont"><a class="bottomNavFont" href="https://www.cnn.com/entertainment">Entertainment</a></div>
+							<div class="bottomNavFont"><a class="bottomNavFont" href="https://www.cnn.com/living">Living</a></div>
+							<div class="bottomNavFont"><a class="bottomNavFont" href="https://www.cnn.com/travel">Travel</a></div>
+							<div class="bottomNavMoney"><a class="bottomNavFont" href="https://www.cnn.com/business">Money</a></div>
+							<div class="bottomNavFont"><a class="bottomNavFont" href="https://www.cnn.com/sports">Sports</a></div>
+
+							<div id="liveTV" class="bottomNavTV">
+								<a href="https://go.cnn.com/?stream=cnn%3Fsr" >Watch Live TV >></a>
+							</div>
+						</div>
+					</div>
+					<!-- End Header Section -->
+
+					<div id='content'>
+<!-- Begin Content -->
+						<div id="mainLeft">
+<!-- Top Stories -->
+							<div class="mainLeftHeader">
+								<p class="mainLeftHeaderFont">Top Stories</p>
+							</div>
+							<div class="mainLeftItem">
+								<p class="mainLeftItemFont">What's Good in Frankfort</p>
+							</div>
+							<div class="mainLeftItem">
+								<p class="mainLeftItemFont">Chicago Crime Down</p>
+							</div>
+							<div class="mainLeftItem">
+								<p class="mainLeftItemFont">Chicago Mayor Lori Lightfoot Celebrates Pride</p>
+							</div>
+							<div class="mainLeftItem">
+								<p class="mainLeftItemFont">Opinion: Trump Still an Asshole</p>
+							</div>
+							<div class="mainLeftItem">
+								<p class="mainLeftItemFont">BREAKING: Ivanka Unqualified to Attend G20 Summit</p>
+							</div>
+<!-- News and Buzz -->
+							<div class="extraPaddingTop"></div>
+							<div class="mainLeftHeader">
+								<p class="mainLeftHeaderFont">News and Buzz</p>
+							</div>
+							<div class="mainLeftItem">
+								<p class="mainLeftItemFont">CSS: Not as Hard as you Think</p>
+							</div>
+							<div class="mainLeftItem">
+								<p class="mainLeftItemFont">Programmer Unemployment at Record Low</p>
+							</div>
+							<div class="mainLeftItem">
+								<p class="mainLeftItemFont">Warehouse Work: Decent Money with No Engagement</p>
+							</div>
+							<div class="mainLeftItem">
+								<p class="mainLeftItemFont">Web Dev: When you should feel Qualified</p>
+							</div>
+							<div class="mainLeftItem">
+								<p class="mainLeftItemFont">Udemy offers FREE Course Listings</p>
+							</div>
+
+
+						</div>
+
+						<div id="mainRight">
+							<div id="mainNewsStory">
+								<div id="mainNewsStoryInfoTop"></div>
+								<div id="mainNewsStoryInfo">
+									<div id="mainNewsLinks">
+										<a class='big' href="https://en.wikipedia.org/wiki/Blackest_Night#Central_storyline">Black Lanterns Defeated!!!</a><br>
+										<a class='medium' href="https://www.neogaf.com/threads/the-mystery-of-bruce-waynes-fake-corpse-and-its-constant-resurrection.393402/">Bruce Wayne: Still Alive???</a><br>
+										<a class="small" href="#">Opinion: Why Superman is Such a Tool</a>
+									</div>
+								</div>
+
+							</div>
+						</div>
+					</div>
+<!-- End Content -->
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

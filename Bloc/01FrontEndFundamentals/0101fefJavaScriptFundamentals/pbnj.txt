@@ -1,0 +1,53 @@
+<<<<<<< HEAD
+
+1)
+PB&J (I have a 2 year old)
+Supplies:
+2 Slices sandwich bread
+Jar of Peanut Butter
+Jar of Jelly
+1 kitchen knive (butter or otherwise_
+
+1. open jars of pb and j.
+2. use knife to gather glob of pb. spread pb on first slice of bread evenly.
+3. use knife to gather glob of jelly. spread jelly evenly on second slice of bread
+4. put down knife.
+5. take slice one and slice two, and put them together, pb side facing jelly side
+6. eat.
+
+2) if the "Say Hi" portion doesnt work, you can work your way back through the process. Starting at "Say Hi", noticing that there is no output, work back to the "User Button Click". It may be human error, or the button section itself doesn't work. If the button is functioning properly, move the next step back to the "User Name Input" to identify the problem.
+
+Say Hi-->User Button Click-->User Name Input
+
+3) Fixing Internet Connectivity:
+Proper function should go:
+Modem-->Router-->Device-->Signal
+I would start at signal to see if the device can connect. You can either connect it to another router for a different signal, or powercycle the device. If there is still no signal, check another device like a phone, tablet, or computer. If the other device has signal, the issue is the original device.
+If the other device also does not have signal, the issue may be with the router. Power cycle or reset the router. If that doesn't fix the issue, call a tech as your ISP is likely having issues.
+=======
+
+1)
+PB&J (I have a 2 year old)
+Supplies:
+2 Slices sandwich bread
+Jar of Peanut Butter
+Jar of Jelly
+1 kitchen knive (butter or otherwise_
+
+1. open jars of pb and j.
+2. use knife to gather glob of pb. spread pb on first slice of bread evenly.
+3. use knife to gather glob of jelly. spread jelly evenly on second slice of bread
+4. put down knife.
+5. take slice one and slice two, and put them together, pb side facing jelly side
+6. eat.
+
+2) if the "Say Hi" portion doesnt work, you can work your way back through the process. Starting at "Say Hi", noticing that there is no output, work back to the "User Button Click". It may be human error, or the button section itself doesn't work. If the button is functioning properly, move the next step back to the "User Name Input" to identify the problem.
+
+Say Hi-->User Button Click-->User Name Input
+
+3) Fixing Internet Connectivity:
+Proper function should go:
+Modem-->Router-->Device-->Signal
+I would start at signal to see if the device can connect. You can either connect it to another router for a different signal, or powercycle the device. If there is still no signal, check another device like a phone, tablet, or computer. If the other device has signal, the issue is the original device.
+If the other device also does not have signal, the issue may be with the router. Power cycle or reset the router. If that doesn't fix the issue, call a tech as your ISP is likely having issues.
+>>>>>>> e59df38adee56a75d913ab7b56a69df30dcf1c35

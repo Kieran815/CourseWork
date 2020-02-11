@@ -1,0 +1,12 @@
+1) JavaScript's five main primitive data types are:
+	String, number, boolean, null and undefined
+
+2) The only two values available to the boolean data type are True and False.
+
+3) Undefined
+
+4) toString()
+
+5) .length
+
+"Kieran Michael Milligan" .charAt(0)

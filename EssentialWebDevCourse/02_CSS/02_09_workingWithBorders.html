@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+	<head>
+		<meta charset="utf-8">
+		<title>Working With Borders</title>
+
+		<style media="screen">
+			#box1 {
+				width: 200px;
+				height: 200px;
+				background-color: green;
+				/* can use 'border' shorthand and include all elements*/
+				border: 10px dotted black;
+			}
+
+			#box2 {
+				margin-top: 15px;
+				width: 200px;
+				height: 200px;
+				background-color: red;
+				/* or use 'border' with 'width', 'color', or 'style', especially if you want to manipulate individual elements */
+				border-width: 10px;
+				border-color: black;
+				border-top-style: solid;
+				border-bottom-style: dotted;
+				border-left-style: dotted;
+				border-right-style: solid;
+			}
+		</style>
+
+	</head>
+	<body>
+
+		<div id="box1">
+
+		</div>
+
+		<div id="box2">
+
+		</div>
+
+	</body>
+</html>

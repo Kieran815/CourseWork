@@ -1,0 +1,44 @@
+1. Define and compare recursion and iteration.
+  A recursion is a method that calls itself and repeats until the entire process is completed, while an iteration is a loop that runs until the conditions are met.
+
+
+2. Name five algorithms that are commonly implemented by recursion.
+
+Factorial of a Number, Greatest Common Divisor, Recursive Binary Search, Linked List Print, Reversing a String, extra: Fibonacci Numbers
+
+
+3. When should you use recursion, and when should you avoid recursion? Give examples for each.
+
+
+
+4. Compare the recursive and iterative solutions to the three algorithms from the checkpoint (factorial, maximum, and fibonacci). What is similar, and what is different?
+
+
+
+5. Given a multi-dimensional collection (such as an array) where the number of dimensions is unknown, write a recursive algorithm to count the number of items in the entire collection.
+
+
+
+6. A palindrome is a word or phrase whose spelling is the same either direction (e.g., racecar). Write a recursive algorithm to determine if a given word or phrase is a palindrome.
+
+const str = []
+str.split('').reverse().join('');
+
+or
+
+[...str].reduce((prev, next)=> next + prev);
+
+or
+
+(this was my first thought...)
+
+const arr = [...str];
+let reverse = '';
+while(arr.length) {
+  reverse = reverse + arr.pop();
+}
+return reverse;
+
+7. Google Easter Egg: Google the term "recursion". Google will prompt you with "Did you mean: recursion". Explain why this behavior exhibits properties of recursion.
+
+Lol Google. They added an example of recursion to the search results. When you type it into the search bar, it pulls up the alt-search option as recursion. Clicking that link calls up the same search options. So searching for Recursion calls itself, making the operation a recursion.

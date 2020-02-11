@@ -1,0 +1,23 @@
+1. Don't Repeat Yourself, as a way to make code more concise and streamlined. You can assign functions to tasks instead of having to write the same code over and over.
+
+2. write = function declaration, where you create the function to do the task
+   execute = invoke function, where declared function operates
+
+3. Parameters are the variable spots in the function that are defined by the argument data to produce the output.
+
+4. Mutating functions will are functions that will change the array of a data set. Non-Mutating functions will produce the total new objects or structures.
+
+`````
+var shoppingCart = [20, 15];
+
+function getTotalCost(prices){
+  let total = 0;
+  // code below
+  for (i = 0; i < prices.length; i++)
+    total += prices[i];
+  // code above
+  return total;
+}
+
+getTotalCost(shoppingCart);
+```

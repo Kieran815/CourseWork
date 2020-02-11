@@ -1,0 +1,68 @@
+// 1. Why do programmers use pseudocode?
+
+  Pseudocode helps to bridge the gap between concept and execution. You think out what you want your program to do, then translate that idea into pseudocode to help structure your idea for programming.
+
+// 2. If you run pseudocode on your computer what would happen?
+
+  Nothing. Pseudocode is not actual code, so the computer wouldn't read it correctly and whatever you put in would throw errors.
+
+
+Programming Assignment
+Write the following algorithms in pseudocode:
+
+1) Create a function that takes two numbers and prints out the greater number.
+
+INPUT Two Numbers.
+IF number x is greater than number y THEN
+  PRINT "X is Greater than Y"
+ELSE IF x = y
+  PRINT "Numbers Equal"
+ELSE
+  PRINT "Y is Greater than X"
+END IF
+---------------------------------------------------------------
+
+2) Create a function that prints out the numbers from 1 to 100.
+
+INIT total to 0
+WHILE the number is less than 100
+  ADD 1 to total
+  PRINT total
+END WHILE
+---------------------------------------------------------------
+
+3) Create a function that searches for a specific entry in a phonebook.
+
+CREATE phonebook [array]
+INPUT name
+FOR each entry in [array]
+IF name equals entry
+  PRINT entry
+
+---------------------------------------------------------------
+
+4) Using the pseudocode you wrote for the previous question, implement it in any computer language of your choice.
+
+
+
+    const phonebook = [
+      { first: 'Albert', last: 'Einstein', year: 1879, passed: 1955 },
+      { first: 'Isaac', last: 'Newton', year: 1643, passed: 1727 },
+      { first: 'Galileo', last: 'Galilei', year: 1564, passed: 1642 },
+      { first: 'Marie', last: 'Curie', year: 1867, passed: 1934 },
+      { first: 'Johannes', last: 'Kepler', year: 1571, passed: 1630 },
+      { first: 'Nicolaus', last: 'Copernicus', year: 1473, passed: 1543 },
+      { first: 'Max', last: 'Planck', year: 1858, passed: 1947 },
+      { first: 'Katherine', last: 'Blodgett', year: 1898, passed: 1979 },
+      { first: 'Ada', last: 'Lovelace', year: 1815, passed: 1852 },
+      { first: 'Sarah E.', last: 'Goode', year: 1855, passed: 1905 },
+      { first: 'Lise', last: 'Meitner', year: 1878, passed: 1968 },
+      { first: 'Hanna', last: 'Hammarström', year: 1829, passed: 1909 }
+    ];
+
+    const person = phonebook.find(function(person) {
+      if(person.last === 'Copernicus') {
+        return (person);
+      }
+    });
+    console.log(person);

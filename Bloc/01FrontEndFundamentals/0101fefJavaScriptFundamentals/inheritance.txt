@@ -1,0 +1,73 @@
+// 1. What does "DRY" stand for? What does the "DRY principle" imply in programming
+// or software development?
+//    DRY is an acronym for "Don't Repeat Yourself", and implies that a programmer
+// should only use a name once to identify a variable or element in JavaScript,
+// to ensure that the program runs smoothly and doesn't reference the wrong
+// element.
+
+
+
+
+
+
+// Code Practice
+// Following the examples above, create a new prototype called Product and three
+// instances of it. Each instance should be a separate product (for example, a
+// shirt, a jacket, and a scarf).
+
+function Product (name, size, price) {
+  this.name = name;
+  this.size = size;
+  this.price = price;
+};
+
+Product.prototype.getName = function getName () {
+  return this.name;
+};
+
+Product.prototype.getSize = function getSize () {
+  return this.size;
+}
+
+Product.prototype.getPrice = function getPrice() {
+  return this.price;
+}
+
+function Shirt (name, size, price) {
+  Product.call(this, name, size, price, 'Product');
+}
+
+Shirt.prototype = Object.create(Product.prototype);
+Shirt.prototype.constructor = Shirt;
+Shirt.parent = Product.prototype;
+
+var shirt = new Shirt('DKNY Button-Down', 'Medium', '$150');
+console.log( shirt.getName() );
+console.log( shirt.getSize() );
+console.log( shirt.getPrice() );
+
+function Pants (name, size, price) {
+  Product.call(this, name, size, price, 'Product');
+}
+
+Pants.prototype = Object.create(Product.prototype);
+Pants.prototype.constructor = Pants;
+Pants.parent = Product.prototype;
+
+var pants = new Pants('Cotoure Straight-Leg Pants', '32/30', '$100');
+console.log( pants.getName() );
+console.log( pants.getSize() );
+console.log( pants.getPrice() );
+
+function Shoes (name, size, price) {
+  Product.call(this, name, size, price, 'Product');
+}
+
+Shoes.prototype = Object.create(Product.prototype);
+Shoes.prototype.constructor = Shoes;
+Shoes.parent = Product.prototype;
+
+var shoes = new Shoes('Italian Leather Loafers', '9.5', '$300');
+console.log( shoes.getName() );
+console.log( shoes.getSize() );
+console.log( shoes.getPrice() );

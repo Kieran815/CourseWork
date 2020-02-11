@@ -1,0 +1,55 @@
+// 1. In your own words, explain single-page applications and progressive web
+//apps.
+
+// A Single-Page Application (SPAs) is a page that can run the content without
+// having to reload or refresh when switching between pages.
+
+// "Progressive Web Apps (PWAs) are just websites that took all the right
+// vitamins." -Alex Russell
+// A progressive web application is designed to function similar to a desktop
+// or mobile application. This is so that no matter what type of device you're
+// on, browser you're using, or connectivity to the internet,  you can still
+// generally have a uniform experience.
+
+// 2. Either from your research or by inspecting popular sites you frequent
+// (using the Chrome DevTools), give some real-world examples of applications
+// built with React and Angular.
+
+// ReactJS: Airbnb; Dropbox; BBC; Facebook; Imgur (yes.); Khan Academy; Netflix;
+//  OkCupid; PayPal; Salesforce; Tesla; Uber; WhatsApp; Zendesk;
+
+// Angular: Amazon; Gmail; The Guardian; jetBlue; Lego app; MSNBC; Netflix;
+//  New York Times; Nike; PayPal; Upwork; Walmart; Weather.com;
+
+
+
+*****
+// 3. Write a summary of the benefits of React vs. Angular. Then ask your mentor
+// about the current state of web development, and ask questions about how they
+// use these two popular technologies in their work.
+
+// ask bill why websites would use both angular and react (i.e.- Netflix, PayPal, etc.);
+
+// ReactJS is a JavaScript library for creating user interfaces. Angular is a full frame-work.
+
+histor of front end
+orig web pages used jquery -> manipulate dom, etc.
+app data used to be built on servers and sent to browser (monolith application= everything wrapped into one server) 'Model View Control (MVC) application pattern' organized pages better, structure apps.
+apps got more complex, caused 'spaghetti code' (all over the place, poorly structured, hard to search and find sections you needed)
+
+MVC helped to give context, model deal w/ databases; controller- deals with 'business model', acts as buffer between model and view;  view- what you would see on the page (dynamic);
+
+first framework was 'Backbone.js', also 'Ember'
+based on jquery, used to manipulate dom, start of single page apps, stopped being updated
+
+angular (is from google) came out, added new features, html tagging,
+
+
+
+angular 1 was made for designers, picked up by developers
+
+react came out, heavily based on components, devs moved to react
+
+went back to angular 2, more emphasis on developers, similar to react, one way data binding,
+
+react 'seems' simpler to code in. 

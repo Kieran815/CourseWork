@@ -1,0 +1,29 @@
+1. a) initialization b) condition c) final-expression
+
+2. infinite loops are loops that keep being processed because they do not have an established end. They will go on forever and likely crash your computer. To avoid them, always set a final expression so that the loop exits.
+
+```
+var shoppingCart = [
+  {
+      id: 0,
+      name: 'Mens Shirt',
+      price: 20,
+      size: 'Large'
+  },
+  {
+  id: 1,
+  name: 'kids shirt',
+  price: 15,
+  size: 'small'
+}
+]
+
+// write code below
+
+for(let i = 0; i < shoppingCart.length; i++) {
+console.log(shoppingCart[i].name);
+}
+
+//this is what i needed. I have been trying to read the code in the way the computer would
+//ie let index start at 0, if index is less than shoppingCart.length, count to the next
+//index. console log shoppingCart index item name.

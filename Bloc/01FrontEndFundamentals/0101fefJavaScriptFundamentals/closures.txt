@@ -1,0 +1,32 @@
+// 1. Lexical Scope is a way for JS to backreference preset functions and
+// variables, then access them at a later time in a different function.
+
+// 2. an example of an advantage of using lexical scoping in a programming
+// language would be in a Role Playing Game. You can set the scope as the level
+// number, then have the multipliers for all of your other stats be based off
+// the existing variable.
+
+// 3. A Closure is an inner function that has access to several scopes inside
+// a program. These include it's own scope (inner variables), the outer
+// function's variables, and any global variables inside the code.
+
+// 4. A case for a closure would be when leveling up a character in a game. you
+// would take the existing level, then multiply it by whatever the bonus
+// multiplier would be, then apply that to the character's overall stats.
+
+
+// CODE PRACTICE:
+
+// Create your own example of a closure and see if it works by using the
+// console.log to print values and verifying they are what you expect.
+
+// figure out the Level Up stats when playing an RPG
+
+function dmg(x) {
+  return function roll(y) {
+    return (x * 0.25) * (y * 0.5);
+  };
+}
+var hit = dmg(10);
+
+console.log(hit())
